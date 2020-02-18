@@ -36,7 +36,7 @@ public class Promocao implements Serializable{
 	private String linkPromocao;
 	
 	@Column(name = "site_promocao", nullable = false)
-	private String sitePromocao;
+	private String site;
 	
 	@Column(name = "descricao", nullable = false)
 	private String descricao;
@@ -84,12 +84,13 @@ public class Promocao implements Serializable{
 		this.linkPromocao = linkPromocao;
 	}
 
-	public String getSitePromocao() {
-		return sitePromocao;
+
+	public String getSite() {
+		return site;
 	}
 
-	public void setSitePromocao(String sitePromocao) {
-		this.sitePromocao = sitePromocao;
+	public void setSite(String site) {
+		this.site = site;
 	}
 
 	public String getDescricao() {
@@ -142,10 +143,11 @@ public class Promocao implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Promocao [id=" + id + ", titulo=" + titulo + ", linkPromocao=" + linkPromocao + ", sitePromocao="
-				+ sitePromocao + ", descricao=" + descricao + ", linkImagem=" + linkImagem + ", preco=" + preco
-				+ ", likes=" + likes + ", dtCadastro=" + dtCadastro + ", categoria=" + categoria + "]";
+		return "Promocao [id=" + id + ", titulo=" + titulo + ", linkPromocao=" + linkPromocao + ", site=" + site
+				+ ", descricao=" + descricao + ", linkImagem=" + linkImagem + ", preco=" + preco + ", likes=" + likes
+				+ ", dtCadastro=" + dtCadastro + ", categoria=" + categoria + "]";
 	}
+
 	
 	
 }
